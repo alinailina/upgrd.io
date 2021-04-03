@@ -1,0 +1,43 @@
+@import "../../mixins";
+
+$green: #bae401;
+
+nav {
+  // border: 1px solid red;
+  background-color: black;
+  color: white;
+  height: 80px;
+  > div {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      height: 100%;
+      width: 10vw;
+      background-color: $green;
+      transform: skew(-10deg);
+    }
+
+    ul {
+      // border: 1px solid red;
+      display: flex;
+
+      li {
+        // border: 1px solid red;
+        @include flex-center;
+        width: 10vw;
+        &:last-of-type {
+          background-color: $green;
+          color: black;
+          transform: skew(-10deg);
+          span {
+            transform: skew(10deg);
+          }
+        }
+      }
+    }
+  }
+}

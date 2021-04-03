@@ -1,0 +1,65 @@
+@import "../../mixins";
+
+.solutions {
+  background-color: black;
+  color: white;
+  > div {
+    @include container;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      // Accordeon
+      ul {
+        border: 1px solid red;
+        width: 60%;
+        max-width: 50em;
+
+        li {
+          // Name
+          h4 {
+            //border: 1px solid red;
+            cursor: pointer;
+            @include flex;
+            align-items: center;
+            justify-content: space-between;
+            @include L;
+            font-weight: 400;
+            padding: 25px 0;
+            border-bottom: 1px solid black;
+            font-family: "Work Sans", sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-style: italic;
+            @include XL;
+          }
+
+          // Text
+          > div {
+            overflow: hidden;
+            transition: all 0.5s ease;
+            padding: 0;
+
+            p {
+              padding: 25px 0;
+            }
+          }
+        }
+      }
+
+      > div {
+        width: 30%;
+      }
+    }
+  }
+
+  @include phone {
+    @include flex-col;
+    ul {
+      width: 100%;
+      li {
+        width: 100%;
+      }
+    }
+  }
+}

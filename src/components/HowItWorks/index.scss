@@ -1,0 +1,61 @@
+@import "../../mixins";
+$green: #bae401;
+
+.process {
+  background-color: black;
+  color: #f7f7f7;
+  min-height: 100vh;
+  @include flex-center;
+
+  > div {
+    @include container;
+    @include flex-col-center;
+    header {
+      // border: 1px solid red;
+      text-align: center;
+      @include mb-XL;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      @include mb-XL;
+      li {
+        width: 30%;
+        //  height: 60vh;
+        background-color: #171719;
+
+        img {
+          position: relative;
+          left: 25px;
+          top: -25px;
+        }
+
+        h4 {
+          display: block;
+          font-family: "Work Sans", sans-serif;
+          @include L;
+          text-transform: uppercase;
+          //font-style: italic;
+          font-weight: 500;
+          position: relative;
+          left: 25px;
+          top: -25px;
+          span {
+            display: block;
+            @include heading;
+            color: black;
+            background-color: $green;
+          }
+        }
+      }
+    }
+
+    button {
+      @include L;
+      text-transform: uppercase;
+      font-family: "Work Sans", sans-serif;
+      color: $green;
+    }
+  }
+}

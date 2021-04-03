@@ -149,3 +149,9 @@
 @mixin radius {
   border-radius: 50px;
 }
+
+@mixin heading {
+  font-family: "knockouthtf71-fullmiddlewt";
+  text-transform: uppercase;
+  font-style: oblique;
+}

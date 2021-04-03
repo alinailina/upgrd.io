@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
-import { photos } from "../../assets/photos/index";
-
+import "./index.scss";
 import { handleDynamicHeight, applyScrollListener } from "./helpers.js";
-
 import { RiArrowRightLine } from "react-icons/ri";
+import { photos } from "../../assets/photos/index";
 
 const OuterContainer = styled.div.attrs(({ dynamicHeight }) => ({
   style: { height: `${dynamicHeight}px` },

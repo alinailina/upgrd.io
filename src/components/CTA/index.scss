@@ -1,0 +1,34 @@
+@import "../../mixins";
+$green: #bae401;
+
+.cta {
+  border: 1px solid red;
+  // background-color: black;
+  // color: #f7f7f7;
+  height: 100vh;
+  text-align: center;
+  @include flex-center;
+  > div {
+    @include flex-col-center;
+    h3 {
+      font-family: "Work Sans", sans-serif;
+      font-style: italic;
+      font-weight: 900;
+    }
+
+    button {
+      background-color: $green;
+      // width: 10vw;
+      background-color: $green;
+      // transform: skew(-15deg);
+      padding: 25px;
+      span {
+        //  transform: skew(15deg);
+        @include S;
+        text-transform: uppercase;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500;
+      }
+    }
+  }
+}
