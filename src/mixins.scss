@@ -1,0 +1,151 @@
+// Media queries
+@mixin phone {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 769px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Flex containers
+
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// Font sizes
+
+@mixin XS {
+  font-size: 1.1rem;
+
+  @include tablet {
+    font-size: 1.1rem;
+  }
+
+  @include desktop {
+    font-size: 1.25vw;
+  }
+}
+
+@mixin S {
+  font-size: 1.25rem;
+
+  @include tablet {
+    font-size: 1.15rem;
+  }
+
+  @include desktop {
+    font-size: 1.5vw;
+  }
+}
+
+@mixin L {
+  font-size: 1.5rem;
+
+  @include tablet {
+    font-size: 1.5rem;
+  }
+
+  @include desktop {
+    font-size: 1.75vw;
+  }
+}
+
+@mixin XL {
+  font-size: 2rem;
+  @include tablet {
+    font-size: 2.5rem;
+  }
+
+  @include desktop {
+    font-size: 3vw;
+  }
+}
+
+@mixin XXL {
+  font-size: 3rem;
+  @include tablet {
+    font-size: 4rem;
+  }
+
+  @include desktop {
+    font-size: 4vw;
+  }
+}
+
+// Utilities
+@mixin mb-S {
+  margin-bottom: 10px;
+  @include desktop {
+    margin-bottom: 1vw;
+  }
+}
+
+@mixin mb-L {
+  margin-bottom: 25px;
+  @include desktop {
+    margin-bottom: 2vw;
+  }
+}
+
+@mixin mb-XL {
+  margin-bottom: 50px;
+  @include desktop {
+    margin-bottom: 4vw;
+  }
+}
+
+@mixin underline {
+  background: linear-gradient(to top, black 10%, transparent 10%);
+}
+
+@mixin link {
+  color: black;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+  transition: all 0.25s ease;
+}
+
+@mixin container {
+  width: 80%;
+  margin: 0 auto;
+
+  @include phone {
+    width: 90%;
+  }
+}
+
+@mixin radius {
+  border-radius: 50px;
+}
